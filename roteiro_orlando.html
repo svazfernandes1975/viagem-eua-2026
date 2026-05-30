@@ -9,7 +9,7 @@
 :root{--bg:#0a0a0a;--bg2:#111;--bg3:#1a1a1a;--border:#2a2a2a;--border2:#333;--text:#e8e8e8;--muted:#555;--muted2:#888;--green:#4ade80;--gdim:#1a3a2a;--amber:#fbbf24;--adim:#2a1f0a;--blue:#60a5fa;--bdim:#0f1e35;--coral:#fb7185;--cdim:#2a0f14;--purple:#a78bfa;--pdim:#1a1130;--teal:#2dd4bf;--tdim:#0a1e1c;--orange:#f97316;--odim:#1f1208;}
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--bg);color:var(--text);font-family:'Syne',sans-serif}
-.page{max-width:860px;margin:0 auto;padding:3rem 2rem 5rem}
+.page{max-width:860px;margin:0 auto;padding:3rem 2rem 5rem}.btn-back{position:fixed;top:1rem;left:1rem;z-index:100;display:flex;align-items:center;gap:6px;background:var(--bg2);border:1px solid var(--border2);border-radius:50px;padding:.45rem 1rem;font-family:'DM Mono',monospace;font-size:11px;color:var(--muted2);text-decoration:none;transition:border-color .2s,color .2s;backdrop-filter:blur(8px)}.btn-back:hover{border-color:var(--amber);color:var(--amber)}@media(max-width:600px){.btn-back{top:.75rem;left:.75rem;font-size:10px;padding:.4rem .8rem}}
 header{margin-bottom:3rem;border-bottom:1px solid var(--border2);padding-bottom:2rem}
 .ey{font-family:'DM Mono',monospace;font-size:11px;color:var(--muted2);letter-spacing:.15em;text-transform:uppercase;margin-bottom:.75rem}
 h1{font-size:2.4rem;font-weight:800;line-height:1.1;margin-bottom:.5rem}
@@ -58,7 +58,7 @@ h1{font-size:2.4rem;font-weight:800;line-height:1.1;margin-bottom:.5rem}
 </style>
 </head>
 <body>
-<div class="page">
+<a class="btn-back" href="index.html">← início</a><div class="page">
 <header>
   <div class="ey">roteiro de viagem · etapa 1</div>
   <h1>Orlando, Florida</h1>
