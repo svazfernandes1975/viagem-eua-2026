@@ -52,9 +52,9 @@ body{background:var(--bg);color:var(--text);font-family:'Syne',sans-serif;overfl
 .map-wrap{position:relative;margin-top:2rem}
 .route-svg{width:100%;max-width:520px;display:block;margin:0 auto}
 
-/* rota estática */
-.route-path{stroke-dasharray:none;stroke-dashoffset:0}
-.city-dot{opacity:1}
+/* animação da rota */
+.route-path{stroke-dasharray:2000;stroke-dashoffset:2000;transition:stroke-dashoffset 2.5s ease-in-out}
+.city-dot{opacity:0;transition:opacity 0.4s ease}
 
 /* ── CARDS DE CIDADES ── */
 .cities-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.25rem}
@@ -391,7 +391,34 @@ function updateCountdown(){
 updateCountdown();
 setInterval(updateCountdown,1000);
 
-// rota estática — sem animação
+// ── ANIMAÇÃO DA ROTA ──
+var animated = false;
+function animateRoute() {
+  if (animated) return;
+  animated = true;
+  var path = document.getElementById('routePath');
+  if (path) {
+    var len = path.getTotalLength ? path.getTotalLength() : 1800;
+    path.style.strokeDasharray = len;
+    path.style.strokeDashoffset = len;
+    path.getBoundingClientRect();
+    path.style.strokeDashoffset = '0';
+  }
+  document.querySelectorAll('.city-dot').forEach(function(dot, i) {
+    setTimeout(function() { dot.style.opacity = '1'; }, 300 + i * 220);
+  });
+}
+// Dispara assim que qualquer parte do SVG aparecer
+var svg = document.querySelector('.route-svg');
+if (svg) {
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function(entries, obs) {
+      if (entries[0].isIntersecting) { animateRoute(); obs.disconnect(); }
+    }, {threshold: 0}).observe(svg);
+  } else {
+    animateRoute();
+  }
+}
 </script>
 </body>
 </html>
