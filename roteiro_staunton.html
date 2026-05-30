@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roteiro Staunton — 18 a 19/set</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0a0a;--bg2:#111;--bg3:#1a1a1a;--border:#2a2a2a;--border2:#333;--text:#e8e8e8;--muted:#555;--muted2:#888;--green:#4ade80;--gdim:#1a3a2a;--amber:#fbbf24;--adim:#2a1f0a;--blue:#60a5fa;--bdim:#0f1e35;--coral:#fb7185;--cdim:#2a0f14;--purple:#a78bfa;--pdim:#1a1130;--teal:#2dd4bf;--tdim:#0a1e1c;--orange:#f97316;--odim:#1f1208;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:'Syne',sans-serif}
+.page{max-width:860px;margin:0 auto;padding:3rem 2rem 5rem}
+.btn-back{display:inline-flex;align-items:center;gap:5px;background:var(--bg2);border:1px solid var(--border2);border-radius:50px;padding:.35rem .9rem;font-family:'DM Mono',monospace;font-size:10px;color:var(--muted2);text-decoration:none;transition:border-color .2s,color .2s;margin-bottom:1.5rem}.btn-back:hover{border-color:var(--amber);color:var(--amber)}
+header{margin-bottom:3rem;border-bottom:1px solid var(--border2);padding-bottom:2rem}
+.ey{font-family:'DM Mono',monospace;font-size:11px;color:var(--muted2);letter-spacing:.15em;text-transform:uppercase;margin-bottom:.75rem}
+h1{font-size:2.4rem;font-weight:800;line-height:1.1;margin-bottom:.5rem}
+.hs{font-size:.9rem;color:var(--muted2);margin-bottom:1.5rem}
+.hst{display:flex;gap:2rem;flex-wrap:wrap}
+.sv{font-size:1.3rem;font-weight:700}.sl{font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
+.day{margin-bottom:2.5rem;border:1px solid var(--border2);border-radius:16px;overflow:hidden}
+.dh{padding:1rem 1.5rem;display:flex;align-items:center;gap:1rem;border-bottom:1px solid var(--border)}
+.dn{font-family:'DM Mono',monospace;font-size:11px;font-weight:500;padding:3px 10px;border-radius:20px;flex-shrink:0}
+.dt{font-size:1rem;font-weight:700}.dd{font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);margin-left:auto;white-space:nowrap}
+.items{padding:.5rem 0}
+.item{display:flex;padding:0 1.5rem}
+.itl{display:flex;flex-direction:column;align-items:center;min-width:56px;padding-top:.75rem}
+.itt{font-family:'DM Mono',monospace;font-size:11px;color:var(--muted2);white-space:nowrap;margin-bottom:5px;text-align:center}
+.idc{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.iln{width:1px;background:var(--border);flex:1;min-height:24px;margin-top:4px}
+.ib{flex:1;padding:.75rem 0 .75rem 1rem;border-bottom:1px solid var(--border)}
+.item:last-child .ib{border-bottom:none}
+.itl2{font-size:.95rem;font-weight:600;margin-bottom:.3rem;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.idesc{font-size:.82rem;color:var(--muted2);line-height:1.6;margin-bottom:.4rem}
+.tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:5px}
+.tag{font-family:'DM Mono',monospace;font-size:10px;font-weight:500;padding:2px 8px;border-radius:20px}
+.tg{background:var(--gdim);color:var(--green)}.ta{background:var(--adim);color:var(--amber)}.tb{background:var(--bdim);color:var(--blue)}.tc{background:var(--cdim);color:var(--coral)}.tp{background:var(--pdim);color:var(--purple)}.tt{background:var(--tdim);color:var(--teal)}.tgr{background:var(--bg3);color:var(--muted2);border:1px solid var(--border)}
+.notice{margin-top:8px;padding:8px 12px;border-radius:8px;font-size:.78rem;line-height:1.5}
+.na{background:#1f0a0a;border-left:2px solid var(--coral);color:#f9a8b4}
+.nt{background:var(--adim);border-left:2px solid var(--amber);color:#fcd34d}
+.ni{background:var(--bdim);border-left:2px solid var(--blue);color:#93c5fd}
+.ns{background:var(--tdim);border-left:2px solid var(--teal);color:#5eead4}
+.pr{display:flex;flex-wrap:wrap;gap:7px;margin-top:8px}
+.pc{font-family:'DM Mono',monospace;font-size:10px;background:var(--bg3);border:1px solid var(--border2);border-radius:6px;padding:3px 8px;color:var(--muted2)}
+.pc strong{color:var(--text)}
+.lnk{margin-top:6px}.lnk a{font-family:'DM Mono',monospace;font-size:10px;color:var(--blue);text-decoration:none;border-bottom:1px solid #1e3a5f}
+.bath{margin-top:8px;padding:8px 12px;border-radius:8px;font-size:.78rem;background:#111820;border-left:2px solid var(--blue);color:#93c5fd}
+.mapw{margin-top:12px;background:#0d1117;border:1px solid var(--border2);border-radius:12px;padding:14px;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.mapt{font-family:'DM Mono',monospace;font-size:10px;color:var(--muted2);text-transform:uppercase;letter-spacing:.1em;margin-bottom:10px}
+.maplnk{margin-top:8px;font-family:'DM Mono',monospace;font-size:10px}
+.maplnk a{color:var(--blue);text-decoration:none;border-bottom:1px solid #1e3a5f}
+.surprise-banner{background:linear-gradient(135deg,#0a0f1a,#111820);border:1px solid var(--border2);border-radius:12px;padding:1.25rem 1.5rem;margin-bottom:2rem}
+.dh1{background:#12100a}.dn1{background:var(--adim);color:var(--amber)}.dc1{background:var(--amber)}
+.dh2{background:#111}.dn2{background:var(--bg3);color:var(--muted2);border:1px solid var(--border)}.dc2{background:var(--muted)}
+@media(max-width:600px){.page{padding:1.5rem 1rem 4rem}h1{font-size:1.8rem}.hst{gap:1.2rem;display:grid;grid-template-columns:1fr 1fr}.dh{flex-wrap:wrap;gap:.5rem}.dd{margin-left:0;width:100%;font-size:10px}.itl{min-width:44px}.itt{font-size:10px}.ib{padding:.6rem 0 .6rem .75rem}.itl2{font-size:.88rem}.idesc{font-size:.8rem}.pr{gap:5px}.pc{font-size:9px;padding:2px 6px}.tag{font-size:9px;padding:2px 6px}.notice{font-size:.75rem;padding:7px 10px}}@media(max-width:400px){.hst{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="page">
+<a class="btn-back" href="index.html">← início</a>
+
+<div class="surprise-banner">
+  <div style="font-size:1.1rem;font-weight:700;margin-bottom:.5rem;color:var(--blue)">✨ A surpresa sobre Staunton</div>
+  <div style="font-size:.82rem;color:var(--muted2);line-height:1.6">Staunton (pronuncia-se <em>"STAN-ton"</em>) é uma das cidades mais autenticamente preservadas da Virginia — saiu da Guerra Civil sem danos estruturais e o centro histórico está intacto desde o século XIX. Tem o que Greenville tem de charme, mas sem nenhum esforço de "revitalização" — é simplesmente o que sempre foi. A culinária local ficou famosa na Vogue e no USA Today. O Zynodoa tem mais prêmios por metro quadrado do que qualquer restaurante que você vai ver nessa viagem. E a Sunspots Studio tem vidro soprado ao vivo — exatamente como o que você viu em Asheville, mas aqui você pode soprar o seu próprio. É uma noite de parada que entrega muito mais do que promete.</div>
+</div>
+
+<header>
+  <div class="ey">roteiro de viagem · etapa 6</div>
+  <h1>Staunton, VA</h1>
+  <div class="hs">18 set (sex) → 19 set (sáb) · 1 noite · Frederick House</div>
+  <div class="hst">
+    <div><div class="sv" style="color:var(--amber)">1</div><div class="sl">noite</div></div>
+    <div><div class="sv" style="color:var(--teal)">100%</div><div class="sl">caminhável</div></div>
+    <div><div class="sv" style="color:var(--green)">incluso</div><div class="sl">café da manhã</div></div>
+    <div><div class="sv" style="color:var(--blue)">510 km · 5h</div><div class="sl">de Asheville</div></div>
+  </div>
+</header>
+
+<!-- DIA 18 -->
+<div class="day">
+  <div class="dh dh1"><span class="dn dn1">Dia 15</span><span class="dt">Chegada + Downtown + Zynodoa</span><span class="dd">Sex 18/set</span></div>
+  <div class="items">
+
+    <div class="item"><div class="itl"><span class="itt">8h30</span><div class="idc dc1"></div><div class="iln"></div></div><div class="ib">
+      <div class="itl2">Saída de Asheville</div>
+      <div class="idesc">I-26 E → I-81 N → saída 222 para Staunton. Trecho atravessa a Shenandoah Valley — vista das Blue Ridge Mountains o tempo todo.</div>
+      <div class="pr"><div class="pc">distância: <strong>~510 km</strong></div><div class="pc">tempo: <strong>~5h</strong></div><div class="pc">chegada: <strong>~13h30</strong></div></div>
+      <div class="notice nt">💡 Pare para almoço em Wytheville ou Marion VA (~2h30 do caminho) — a I-81 tem boas opções de estrada.</div>
+    </div></div>
+
+    <div class="item"><div class="itl"><span class="itt">13h30</span><div class="idc dc1"></div><div class="iln"></div></div><div class="ib">
+      <div class="itl2">Check-in — Frederick House</div>
+      <div class="idesc">Inn histórico em 5 casas do século XIX conectadas no centro de Staunton. Estacionamento gratuito. A uma caminhada de tudo que vale a pena ver na cidade.</div>
+      <div class="tags"><span class="tag tgr">hotel · base</span></div>
+      <div class="pr"><div class="pc">estac.: <strong>grátis no hotel</strong></div><div class="pc">café: <strong>incluso</strong></div></div>
+      <div class="notice nt">💡 Deixe o carro no Frederick House — Staunton downtown é 100% caminhável. Não precisa mais do carro até amanhã de manhã.</div>
+    </div></div>
+
+    <div class="item"><div class="itl"><span class="itt">14h30</span><div class="idc dc1"></div><div class="iln"></div></div><div class="ib">
+      <div class="itl2">Passeio a pé — Beverley Street + Wharf District</div>
+      <div class="idesc">Beverley Street é a artéria principal — arquitetura vitoriana preservada, lojas independentes, galerias. Desça para o Wharf Historic District: ruas de paralelepípedos com galpões de ferrovias do século XIX transformados em restaurantes e lojas boutique.</div>
+      <div class="tags"><span class="tag ta">caminhada · centro histórico</span></div>
+
+      <div class="mapw">
+        <div class="mapt">mapa do passeio a pé · Staunton — downtown</div>
+        <svg viewBox="0 0 360 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;min-width:0;height:auto;display:block;font-family:'DM Mono',monospace">
+          <rect width="360" height="300" fill="#0d1117" rx="6"/>
+          <!-- Beverley St (horizontal principal) -->
+          <rect x="20" y="118" width="320" height="9" fill="#2a2a2a" rx="2"/>
+          <text x="180" y="113" fill="#3a3a3a" font-size="9" text-anchor="middle">Beverley Street · centro histórico</text>
+          <!-- Augusta St (vertical) -->
+          <rect x="148" y="30" width="7" height="240" fill="#222" rx="1"/>
+          <text x="151" y="28" fill="#333" font-size="7" text-anchor="middle">Augusta St</text>
+          <!-- New St -->
+          <rect x="220" y="30" width="6" height="240" fill="#1e1e1e" rx="1"/>
+          <!-- Johnson St -->
+          <rect x="80" y="30" width="6" height="240" fill="#1e1e1e" rx="1"/>
+          <!-- Wharf District (abaixo) -->
+          <rect x="20" y="195" width="320" height="7" fill="#222" rx="1"/>
+          <text x="180" y="190" fill="#333" font-size="7" text-anchor="middle">Johnson St — Wharf District</text>
+          <!-- ferroviário decorativo -->
+          <rect x="20" y="235" width="320" height="4" fill="#1a1a1a" rx="1"/>
+          <text x="180" y="248" fill="#333" font-size="7" text-anchor="middle">Virginia Central Railroad · histórico</text>
+          <!-- ROTA -->
+          <polyline points="152,145 80,145 80,195 152,195 220,195 220,145 280,145" fill="none" stroke="#fbbf24" stroke-width="2" stroke-dasharray="5,3"/>
+          <!-- PONTOS -->
+          <circle cx="152" cy="145" r="9" fill="#fbbf24"/>
+          <text x="152" y="168" fill="#fbbf24" font-size="8" text-anchor="middle">Hotel</text>
+          <circle cx="80" cy="145" r="5" fill="#2dd4bf"/>
+          <text x="65" y="141" fill="#2dd4bf" font-size="8" text-anchor="end">Sunspots</text>
+          <text x="65" y="151" fill="#555" font-size="7" text-anchor="end">vidro soprado</text>
+          <circle cx="220" cy="145" r="5" fill="#2dd4bf"/>
+          <text x="235" y="141" fill="#2dd4bf" font-size="8">Woolworth</text>
+          <text x="235" y="151" fill="#555" font-size="7">clock tower</text>
+          <circle cx="280" cy="145" r="5" fill="#a78bfa"/>
+          <text x="295" y="141" fill="#a78bfa" font-size="8">Zynodoa</text>
+          <text x="295" y="151" fill="#555" font-size="7">jantar ★</text>
+          <circle cx="80" cy="195" r="5" fill="#fb7185"/>
+          <text x="65" y="191" fill="#fb7185" font-size="8" text-anchor="end">Redbeard</text>
+          <text x="65" y="201" fill="#555" font-size="7" text-anchor="end">cerveja</text>
+          <circle cx="152" cy="195" r="5" fill="#2dd4bf"/>
+          <text x="167" y="191" fill="#2dd4bf" font-size="8">Wharf</text>
+          <text x="167" y="201" fill="#555" font-size="7">District</text>
+          <!-- legenda -->
+          <rect x="8" y="255" width="120" height="38" fill="#0d1117" stroke="#2a2a2a" stroke-width="0.5" rx="4"/>
+          <circle cx="18" cy="268" r="4" fill="#fbbf24"/><text x="26" y="272" fill="#666" font-size="8">hotel (estac. grátis)</text>
+          <circle cx="18" cy="284" r="4" fill="#2dd4bf"/><text x="26" y="288" fill="#666" font-size="8">circuito histórico</text>
+          <circle cx="80" cy="268" r="4" fill="#a78bfa"/><text x="88" y="272" fill="#666" font-size="8">Zynodoa (jantar)</text>
+          <circle cx="80" cy="284" r="4" fill="#fb7185"/><text x="88" y="288" fill="#666" font-size="8">Redbeard (cerveja)</text>
+          <text x="8" y="296" fill="#333" font-size="7">~1,5 km · ~45 min sem paradas</text>
+        </svg>
+        <div class="maplnk"><a href="https://www.google.com/maps/search/Staunton+Virginia+downtown+Beverley+Street" target="_blank">↗ Abrir no Google Maps</a></div>
+      </div>
+    </div></div>
+
+    <div class="item"><div class="itl"><span class="itt">15h30</span><div class="idc dc1"></div><div class="iln"></div></div><div class="ib">
+      <div class="itl2">Sunspots Studios — vidro soprado ao vivo</div>
+      <div class="idesc">Estúdio de vidro soprado artesanal na Beverley St — demonstrações ao vivo gratuitas, galeria com peças à venda e aula de sopro disponível. Exatamente como em Asheville, mas aqui você pode soprar o seu próprio ornamento (~US$45–60 p/p).</div>
+      <div class="tags"><span class="tag tp">arte · vidro</span></div>
+      <div class="pr"><div class="pc">demonstração: <strong>grátis</strong></div><div class="pc">aula de sopro: <strong>~US$45–60 p/p</strong></div></div>
+      <div class="lnk"><a href="https://www.sunspotsstudios.com" target="_blank">sunspotsstudios.com</a></div>
+    </div></div>
+
+    <div class="item"><div class="itl"><span class="itt">17h</span><div class="idc dc1"></div><div class="iln"></div></div><div class="ib">
+      <div class="itl2">Redbeard Brewing + Ox-Eye Tasting Room</div>
+      <div class="idesc">Dois pontos lado a lado no Wharf District — <strong>Redbeard Brewing</strong> (cervejaria artesanal local) e <strong>Ox-Eye Vineyards Tasting Room</strong> (vinhos da Shenandoah Valley). Perfeito para uma taça enquanto descansa antes do jantar.</div>
+      <div class="tags"><span class="tag tg">cerveja · vinho</span></div>
+      <div class="pr"><div class="pc">estimativa: <strong>~US$12–18 p/p</strong></div></div>
+    </div></div>
+
+    <div class="item"><div class="itl"><span class="itt">18h30</span><div class="idc dc1"></div><div class="iln"></div></div><div class="ib">
+      <div class="itl2">🚿 Pausa no hotel</div>
+      <div class="bath">🚿 Hotel a 5 min a pé de tudo. Banho rápido e saída para o jantar.</div>
+    </div></div>
+
+    <div class="item"><div class="itl"><span class="itt">19h30</span><div class="idc dc1"></div></div><div class="ib">
+      <div class="itl2">Jantar — Zynodoa ★★ destaque da etapa</div>
+      <div class="idesc">Southern cuisine farm-to-table num prédio histórico de 1800s na Beverley St. Ingredientes do Vale do Shenandoah e da Chesapeake Bay. Reconhecido pela Vogue e pelo USA Today como um dos melhores restaurantes do sul dos EUA. O cornbread brûlée é lendário — não pule.</div>
+      <div class="tags"><span class="tag tg">jantar ★★ destaque</span></div>
+      <div class="pr"><div class="pc">estimativa: <strong>~US$30–50 p/p</strong></div><div class="pc">horário: <strong>seg–dom 17h–21h30</strong></div><div class="pc">a pé do hotel: <strong>~3 min</strong></div></div>
+      <div class="notice na">⚠ Reserve com antecedência em zynodoa.com — sexta à noite lota. O restaurante fica a 3 min a pé do hotel.</div>
+      <div class="lnk"><a href="https://www.zynodoa.com" target="_blank">zynodoa.com — reserve aqui</a></div>
+    </div></div>
+
+  </div>
+</div>
+
+<!-- DIA 19 -->
+<div class="day">
+  <div class="dh dh2"><span class="dn dn2">Dia 16</span><span class="dt">Frontier Culture Museum + Saída para Williamsburg</span><span class="dd">Sáb 19/set</span></div>
+  <div class="items">
+
+    <div class="item"><div class="itl"><span class="itt">9h30</span><div class="idc dc2"></div><div class="iln"></div></div><div class="ib">
+      <div class="itl2">Café da manhã incluso + checkout</div>
+      <div class="idesc">Café da manhã no Frederick House antes de sair. Feche a mala na véspera — dia de trecho longo.</div>
+    </div></div>
+
+    <div class="item"><div class="itl"><span class="itt">10h</span><div class="idc dc2"></div><div class="iln"></div></div><div class="ib">
+      <div class="itl2">Frontier Culture Museum</div>
+      <div class="idesc">Museu ao ar livre com fazendas históricas reconstruídas de 4 países — Irlanda, Inglaterra, Alemanha e África — que mostram como os colonos que moldaram o Vale do Shenandoah viviam. Atores em trajes de época. Um dos melhores museus de história viva dos EUA. Fica a 5 min de carro do hotel.</div>
+      <div class="tags"><span class="tag tt">museu ao ar livre</span></div>
+      <div class="pr"><div class="pc">ingresso: <strong>~US$14 p/p</strong></div><div class="pc">horário: <strong>9h–17h</strong></div><div class="pc">estac.: <strong>grátis</strong></div><div class="pc">duração sugerida: <strong>~1h30</strong></div></div>
+      <div class="notice nt">💡 Se o tempo apertar, pule o museum e siga para Williamsburg — mas se der, vale muito. É diferente de tudo que você vai ver no restante da viagem.</div>
+      <div class="lnk"><a href="https://www.frontiermuseum.org" target="_blank">frontiermuseum.org</a></div>
+    </div></div>
+
+    <div class="item"><div class="itl"><span class="itt">11h30</span><div class="idc dc2"></div></div><div class="ib">
+      <div class="itl2">Saída para Williamsburg</div>
+      <div class="idesc">I-64 E direto para Williamsburg. Trecho tranquilo pela Virginia central.</div>
+      <div class="tags"><span class="tag tb">rota</span></div>
+      <div class="pr"><div class="pc">distância: <strong>~280 km</strong></div><div class="pc">tempo: <strong>~3h</strong></div><div class="pc">chegada: <strong>~14h30</strong></div></div>
+    </div></div>
+
+  </div>
+</div>
+
+<!-- resumo custos -->
+<div style="background:#111;border:1px solid var(--border2);border-radius:12px;padding:1.25rem 1.5rem;margin-top:1rem">
+  <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:1rem">resumo de custos estimados · casal</div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:10px">
+    <div style="background:var(--bg3);border-radius:8px;padding:10px"><div style="font-size:11px;color:var(--muted2);margin-bottom:3px">estacionamento</div><div style="font-size:1.1rem;font-weight:700;color:var(--green)">grátis</div><div style="font-size:10px;color:var(--muted)">hotel + tudo a pé</div></div>
+    <div style="background:var(--bg3);border-radius:8px;padding:10px"><div style="font-size:11px;color:var(--muted2);margin-bottom:3px">refeições</div><div style="font-size:1.1rem;font-weight:700;color:var(--amber)">~US$80–110</div><div style="font-size:10px;color:var(--muted)">jantar Zynodoa + cervejaria</div></div>
+    <div style="background:var(--bg3);border-radius:8px;padding:10px"><div style="font-size:11px;color:var(--muted2);margin-bottom:3px">Frontier Museum</div><div style="font-size:1.1rem;font-weight:700;color:var(--blue)">~US$28</div><div style="font-size:10px;color:var(--muted)">US$14 p/p casal</div></div>
+    <div style="background:var(--bg3);border-radius:8px;padding:10px"><div style="font-size:11px;color:var(--muted2);margin-bottom:3px">total estimado</div><div style="font-size:1.1rem;font-weight:700;color:var(--text)">~US$108–138</div><div style="font-size:10px;color:var(--muted)">casal · sem hospedagem</div></div>
+  </div>
+</div>
+
+</div>
+</body>
+</html>
